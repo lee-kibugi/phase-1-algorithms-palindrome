@@ -5,7 +5,31 @@ function isPalindrome(word) {
 /* 
   Add your pseudocode here
 */
+console.log(isPalindrome("madam")); // true
+console.log(isPalindrome("robot")); // false
+console.log(isPalindrome("level")); // true
+console.log(isPalindrome("hello")); // false
 
+
+function isPalindrome(str) {
+  // 1
+  str = str.toLowerCase();
+  let left = 0;
+  let right = str.length - 1;
+
+  // 2
+  while (left < right) {
+    // 3
+    if (str[left] !== str[right]) {
+      return false;
+    }
+    left++;
+    right--;
+  }
+
+  // 4
+  return true;
+}
 /*
   Add written explanation of your solution here
 */
